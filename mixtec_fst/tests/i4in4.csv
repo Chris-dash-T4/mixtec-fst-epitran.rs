@@ -1,0 +1,6 @@
+segmentation,form
+i4in4,i4in4
+i{1>4}in4,i4in4
+i{3>4}in{3>4},i4in4
+ni{1>14}-,ni14-
+ba'{3>14}a4,ba'14a4
