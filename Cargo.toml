@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["parserule", "rsepitran"]
+members = ["parserule", "rsepitran", "mixtec_fst"]
 
 # Specify a consistent version of rustfst for all crates
 [workspace.dependencies]

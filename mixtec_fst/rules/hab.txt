@@ -1,0 +1,17 @@
+::cons:: = ([ptkbdgmnñsxjrlyw]|n[dgkt]|mb|kw|ch)
+::coda:: = (io|[aiueo])[n']?
+::segment:: = (::cons::)?(::coda::)
+
+% Habitual form
+% TODO reverse direction
+
+1 -> {1>4} / #::segment:: _ 
+0 -> {>1} / #(::segment::)\{1>4\}(::segment::) _ [34]
+3 -> {3>4} / #::segment:: _ 
+3 -> {3>4} / #(::segment::)\{3>4\}(::coda::) _ % 3-3 + HAB becomes 4-4 when monosyllabic
+0 -> {>2} / #(::segment::)\{3>4\}(::coda::) _ 4 % 3-4 + HAB becomes 4-24 when monosyllabic
+% HAB with <14> in m1
+0 -> i4- / # _ (::segment::)14(::segment::)[1234]+#
+1 -> {1>} / #(::segment::) _ 4(::segment::)[1234](::segment::)[1234]+#
+
+

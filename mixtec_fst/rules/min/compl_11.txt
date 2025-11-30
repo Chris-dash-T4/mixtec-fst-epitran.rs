@@ -1,0 +1,6 @@
+::cons:: = ([ptkbdgmnñsxjrlyw]|n[dgkt]w?|mb|kw|ch)
+::coda:: = (i[aou]|[aiueo])[n']?
+::segment:: = (::cons::)?(::coda::)
+
+1 -> {\>1}1 / #(::segment::)_4?[^1234]
+1 -> {3\>1} / #(::segment::)({\>1})?_[^34-]
