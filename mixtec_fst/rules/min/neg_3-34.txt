@@ -1,0 +1,7 @@
+::cons:: = ([ptkbdgmnñsxjrlyw]|n[dgkt]w?|mb|kw|ch)
+::coda:: = (i[aou]|[aiueo])[n']?
+::segment:: = (::cons::)?(::coda::)
+
+14 -> {3\>14} / #(::segment::)_[^1234]
+% 3-4 + NEG becomes 14-24 when monosyllabic
+3 -> {\>3} / #(::segment::){3\>14}(::coda::) _ 4

@@ -1,0 +1,38 @@
+::cons:: = ([ptkbdgmnñsxjrlyw]|n[dgkt]|mb|kw|ch)
+::coda:: = (io|[aiueo])[n']?
+::segment:: = (::cons::)?(::coda::)
+
+% 14 as {>1}4, tonal completive
+% I'm adding 13 here bc it's not licensed elsewhere
+1 -> {\>1} / #(::segment::)_[34][^1234]
+
+% 14 as negation
+14 -> {1\>14} / #(::segment::)_[^1234]
+14 -> {3\>14} / #(::segment::)_[^1234]
+14 -> {4\>14} / #(::segment::)_[^1234]
+% Detransitivization
+14 -> {3\>1\>14} / #(::segment::)_[^1234]
+
+1 -> {\>1} / #(::segment::){(3\>)?1\>14}(::segment::) _ [34]
+% 3-3 + NEG becomes 14-4 when monosyllabic
+4 -> {3\>4} / #(::segment::){3\>14}(::coda::) _
+% 3-4 + NEG becomes 14-24 when monosyllabic
+2 -> {\>2} / #(::segment::){3\>14}(::coda::) _ 4
+
+% Alternate negation
+4 -> {1\>}4 / #(::segment::)_[^1234]
+
+% 4 as Habitual
+4 -> {1\>4} / #(::segment::)_[^1234]
+4 -> {3\>4} / #(::segment::)_[^1234]
+4 -> {3\>1\>4} / #(::segment::)_[^1234]
+4 -> {4\>14} / #(::segment::)_[^1234]
+
+1 -> {\>1} / #(::segment::){(3\>)?1\>4}(::segment::) _ [34]
+% 3-3 + HAB becomes 4-4 when monosyllabic
+4 -> {3\>4} / #(::segment::){3\>4}(::coda::) _
+% 3-4 + HAB becomes 4-24 when monosyllabic
+2 -> {\>2} / #(::segment::){3\>4}(::coda::) _ 4
+
+% Initial 1 may be 3 + detr
+1 -> {3\>1} / #(::segment::)_[^34-]
